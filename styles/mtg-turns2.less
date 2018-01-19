@@ -1,0 +1,126 @@
+﻿@untap: #F8674A;
+@upkeep: #d786fa;
+@draw: #00ffff;
+@main: #FB9E37;
+@combat: #f2332d;
+@end: #426964;
+
+body, html {
+    height: 100%;
+  
+
+#phase-wrapper {
+    width: 100vw;
+    height: 100vh;
+    white-space: nowrap;
+    
+
+    .content-container {
+        height: 100%;
+        width: 100vw;
+        display: none;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        .content {
+            &.phase {
+                display: table;
+                text-align: center;
+                height: 100%;
+                background-color: transparent;
+
+                a {
+                    display: table-cell;
+                    vertical-align: middle;
+                    color: white;
+                    font-size: 20vh;
+                    border: none;
+                    background-color: transparent;
+                }
+            }
+        }
+        &.current{
+            display:block;
+        }
+        &#untap {
+            background-color: @untap;
+        }
+
+        &#upkeep {
+            background-color: @upkeep;
+        }
+
+        &#draw {
+            background-color: @draw;
+        }
+
+        &#main1 {
+            background-color: @main;
+        }
+
+        &#combat {
+            background-color: @combat;
+        }
+
+        &#main2 {
+            background-color: @main;
+        }
+
+        &#end {
+            background-color: @end;
+        }
+    }
+}
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.slideLeftIn{
+	animation-name: slideLeftIn;
+	-webkit-animation-name: slideLeftIn;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+.slideLeftOut{
+	animation-name: slideLeftOut;
+	-webkit-animation-name: slideLeftOut;	
+
+	animation-duration: 2s;	
+	-webkit-animation-duration: 2s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes slideLeftIn {
+	0% {
+		transform: translateX(150%);
+      
+	}
+	
+	100% {
+		transform: translateX(0%);
+	}
+}
+@keyframes slideLeftOff {
+	0% {
+		transform: translateX(0%);
+        display:block;
+	}
+
+			
+	100% {
+        transform: translateX(150%);
+        
+		
+	}
+}

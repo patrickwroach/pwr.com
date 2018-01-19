@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <title>Web Design</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Patrick W. Roach Designs" />
+    <meta property="og:description" content="Illustration, Graphic Design, Concept Art" />
+    <meta property="og:url" content="http://www.patrickwroach.com/" />
+    <meta property="og:image" content="../images/portfolio/flamehand.svg" />
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="../styles/main-styles.css" />
+    <link rel="icon" href="../images/web-assets/icon.png">
+    <script src="../scripts/lib/jquery-2.1.0.min.js"></script>
+</head>
+<body>
+    <div class="content-container black" id="nav">
+        <div id="infinity-keeper">
+            <div id="infinity-container-small">
+                <div id="infinity">
+                </div>
+                <div class="cubeLines">
+
+                </div>
+                <div class="cubeLines left">
+
+                </div>
+                <div class="cubeLines right">
+
+                </div>
+
+            </div>
+        </div>
+        <div class="content">
+            <ul>
+                <li><a href="/artwork">artwork</a></li>
+                <li><a href="/webwork">webwork</a></li>
+                <li><a href="/contact">contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content-container white" id="webwork">
+        <div class="left-color-block teal wide in-view"></div>
+        <div class="content">
+            <div class="image-block highlight">
+                <img src="../images/portfolio/heart.svg" />
+            </div>
+            <div class="copy-block">
+                <h1>Web Design</h1>
+                <p>As a front-end developer, I am fluent in HTML, CSS, JavaScript, and most major frameworks. I have worked on sites across a wide scope from architecting and maintaining enterprise web presences to creating custom blog templates.</p>
+                <p>Below is a list of some of my favorite projects.</p>
+
+                <a class="down" href="#portfolio"><img src="../images/web-assets/down-arrow.png" /></a>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="content-container black" id="portfolio">
+        <div class="content">
+            <div id="web-port-grid">
+                <a id="dailywtf" href="/webwork/the-daily-wtf.html" class="site-block">
+                    <h3>The Daily WTF</h3><hr />
+                    <p>Revamp of a classic<br /></p>
+                </a>
+                <a id="inedo" href="/webwork/inedo.html" class="site-block cerule">
+                    <h3>Inedo.com</h3><hr />
+                    <p>Site for an enterpise toolset<br /></p>
+                </a>
+                <a id="offset" href="/webwork/code-offsets.html" class="site-block cobalt">
+                    <h3>Code Offsets</h3><hr />
+                    <p>Minisite for a code charity<br /></p>
+                </a>
+                <a id="abc" href="/webwork/abc.html" class="site-block teal">
+                    <h3>ABC++</h3><hr />
+                    <p>Minisite for an ABC book<br /></p>
+                </a>
+
+                <a id="astah" href="/webwork/astah.html" class="site-block cadet">
+                    <h3>Astah.net</h3><hr />
+                    <p>Site for an UML tool<br /></p>
+                </a>
+                <a id="nat" href="/webwork/naturalist.html" class="site-block dusty-rose">
+                    <h3>Naturalist Games</h3><hr />
+                    <p>Site for a boardgame company<br /></p>
+                </a>
+                <a id="jp" href="/webwork/inedo-japan.html" class="site-block pink">
+                    <h3>Inedo Japan</h3><hr />
+                    <p>Minisite for Japan launch<br /></p>
+                </a>
+                <a id="release" href="/webwork/release.html" class="site-block mauve">
+                    <h3>Release</h3><hr />
+                    <p>Minisite for a card game<br /></p>
+                </a>
+                <a id="noir" href="/webwork/noir.html" class="site-block">
+                    <h3>Noir Barbare</h3><hr />
+                    <p>Tumblr reskin for a podcast<br /></p>
+
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="content-container black" id="footer">
+        <p>&copy; Patrick Roach | 2017</p>
+    </div>
+    <!--Animate on Scroll Squrl-->
+    <script type="text/javascript">
+        var $animation_elements = $('.left-color-block');
+        var $window = $(window);
+
+        function check_if_in_view() {
+            var window_height = $window.height();
+            var window_top_position = $window.scrollTop();
+            var window_bottom_position = (window_top_position + window_height);
+
+            $.each($animation_elements, function () {
+                var $element = $(this);
+                var element_height = $element.outerHeight();
+                var element_top_position = $element.offset().top;
+                var element_bottom_position = (element_top_position + element_height);
+
+                //checking to see if this current container is within viewport
+                if ((element_bottom_position >= window_top_position) &&
+                (element_top_position <= window_bottom_position)) {
+                    $element.addClass('in-view');
+                } else {
+
+                }
+            });
+        }
+
+        $window.on('scroll resize', check_if_in_view);
+        $window.trigger('scroll');
+    </script>
+    <!--Smooth Scroll-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+                var target = this.hash;
+                var $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top - 0
+                }, 1000, 'swing', function () {
+                    window.location.hash = target;
+                });
+            });
+        });
+    </script>
+ 
+</body>
+</html>

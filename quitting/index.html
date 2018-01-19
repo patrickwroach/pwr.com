@@ -1,0 +1,102 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <title>Nice job Sarah!</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Patrick W. Roach Designs">
+    <meta property="og:description" content="Illustration, Graphic Design, Concept Art">
+    <meta property="og:url" content="http://www.patrickwroach.com/">
+    <meta property="og:image" content="images/portfolio/flamehand.svg">
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="../styles/main-styles.css" />
+    <link rel="icon" href="../images/web-assets/icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Average Sans" rel="stylesheet">
+
+</head>
+<body>
+    <div class="content-container black" id="nav">
+        <div id="infinity-keeper">
+            <div id="infinity-container-small">
+                <div id="infinity">
+                </div>
+                <div class="cubeLines">
+
+                </div>
+                <div class="cubeLines left">
+
+                </div>
+                <div class="cubeLines right">
+
+                </div>
+
+            </div>
+        </div>
+        <div class="content">
+            <ul>
+                <li><a href="/artwork">artwork</a></li>
+                <li><a href="/webwork">webwork</a></li>
+                <li><a href="/contact">contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="content-container dark cig" id="landing">
+
+        <div class="content" id="countup">
+
+
+            <p>
+                It's been <span id="days">00</span><span> days</span>, <span id="hours">00</span><span> hours</span>, <span id="minutes">00</span><span> minutes</span>, <span id="seconds">00</span><span> seconds</span>.
+                <br />
+                You have saved <span id="saved">00</span><span> dollars</span>!
+            </p>
+
+
+
+
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        window.onload = function () {
+            // Month,Day,Year,Hour,Minute,Second
+            upTime('may,19,2017,00:00:00'); // ****** Quit Date
+        }
+        function upTime(countTo) {
+            now = new Date();
+            countTo = new Date(countTo);
+            difference = (now - countTo);
+
+            costOfPack = (7);
+            cigsPerDay = (6);
+            packsPerDay = (cigsPerDay / 20);
+            costPerDay = (costOfPack * packsPerDay);
+
+            days = Math.floor(difference / (60 * 60 * 1000 * 24) * 1);
+            hours = Math.floor((difference % (60 * 60 * 1000 * 24)) / (60 * 60 * 1000) * 1);
+            mins = Math.floor(((difference % (60 * 60 * 1000 * 24)) % (60 * 60 * 1000)) / (60 * 1000) * 1);
+            secs = Math.floor((((difference % (60 * 60 * 1000 * 24)) % (60 * 60 * 1000)) % (60 * 1000)) / 1000 * 1);
+            saved = ((difference / (60 * 60 * 1000 * 24) * 1) * costPerDay).toFixed(2);
+
+         
+
+            
+            document.getElementById('days').firstChild.nodeValue = days;
+            document.getElementById('hours').firstChild.nodeValue = hours;
+            document.getElementById('minutes').firstChild.nodeValue = mins;
+            document.getElementById('seconds').firstChild.nodeValue = secs;
+            document.getElementById('saved').firstChild.nodeValue = saved;
+            clearTimeout(upTime.to);
+            upTime.to = setTimeout(function () { upTime(countTo); }, 1000);
+        }
+    </script>
+    <div class="content-container black" id="footer">
+        <p>Way to go squrl</p>
+    </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <title>Phase Swiper</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="MTG Phase Swiper" />
+    <meta property="og:description" content="An unneccesary tool for MTG" />
+    <meta property="og:url" content="http://www.patrickwroach.com/mtg-turns" />
+    <meta property="og:image" content="images/portfolio/flamehand.svg" />
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="../styles/main-styles.css" />
+    <link type="text/css" rel="stylesheet" href="../styles/mtg-turns2.css" />
+    <link rel="icon" href="../images/web-assets/icon.png">
+    <script src="../scripts/lib/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".content-container").click(function (e) {
+                $(this).addClass("slideLeftOut");
+                $setTimeout((this).removeClass("slideLeftOut"), 2000);
+                    
+            });
+        });
+    </script>
+   
+
+</head>
+<body>
+    <div id="phase-wrapper" ">
+        <div class="content-container current" id="untap">
+            <div class="content phase">
+                <a href="#upkeep">Untap</a>
+
+            </div>
+        </div>
+        <div id="upkeep" class="content-container">
+            <div class="content phase">
+                <a href="#draw">Upkeep</a>
+            </div>
+        </div>
+        <div id="draw" class="content-container">
+            <div class="content phase">
+                <a href="#main1">Draw</a>
+
+            </div>
+        </div>
+        <div id="main1" class="content-container">
+            <div class="content phase">
+                <a href="#combat">1st Main</a>
+            </div>
+        </div>
+        <div id="combat" class="content-container">
+            <div class="content phase">
+                <a href="#main2">Combat</a>
+            </div>
+        </div>
+        <div id="main2" class="content-container">
+            <div class="content phase">
+                <a href="#end">2nd Main</a>
+            </div>
+        </div>
+        <div id="end" class="content-container">
+            <div class="content phase">
+                <a href="#untap">End</a>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function removeCurrent() {
+            $(this).removeClass("current");
+        }
+        
+    </script>
+    <script type="text/javascript">
+
+            $('html, body').on('touchstart touchmove', function (e) {
+                console.log("notouch");
+                e.preventDefault();
+            });
+
+    </script>
+</body>
+</html>
