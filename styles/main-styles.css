@@ -316,7 +316,7 @@ ul li {
 }
 @media (max-width: 800px) {
   .content-container#landing.site-port .content .copy-block {
-    height: 75%;
+    height: auto;
   }
 }
 .content-container#landing.site-port .content .image-block {
@@ -331,7 +331,7 @@ ul li {
   .content-container#landing.site-port .content .image-block {
     padding: 10px 0;
     margin: 0;
-    height: 30%;
+    height: auto;
     width: 100%;
     position: relative;
     display: table;
