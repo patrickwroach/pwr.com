@@ -258,21 +258,16 @@ ul li {
   box-sizing: border-box;
 }
 .content-container#landing .content p {
-  font-size: 3.5em;
+  font-size: 3.5vw;
   display: table-cell;
   vertical-align: middle;
   text-align: left;
-  color: black;
+  color: #0d0d0d;
   font-family: montserratbold;
   width: 100%;
 }
 .content-container#landing .content p span {
   color: #01abdf;
-}
-@media (max-width: 1110px) {
-  .content-container#landing .content p {
-    font-size: 1em;
-  }
 }
 @media (max-width: 500px) {
   .content-container#landing .content p {

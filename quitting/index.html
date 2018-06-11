@@ -67,21 +67,15 @@
             now = new Date();
             countTo = new Date(countTo);
             difference = (now - countTo);
-
             costOfPack = (7);
             cigsPerDay = (6);
             packsPerDay = (cigsPerDay / 20);
             costPerDay = (costOfPack * packsPerDay);
-
             days = Math.floor(difference / (60 * 60 * 1000 * 24) * 1);
             hours = Math.floor((difference % (60 * 60 * 1000 * 24)) / (60 * 60 * 1000) * 1);
             mins = Math.floor(((difference % (60 * 60 * 1000 * 24)) % (60 * 60 * 1000)) / (60 * 1000) * 1);
             secs = Math.floor((((difference % (60 * 60 * 1000 * 24)) % (60 * 60 * 1000)) % (60 * 1000)) / 1000 * 1);
-            saved = ((difference / (60 * 60 * 1000 * 24) * 1) * costPerDay).toFixed(2);
-
-         
-
-            
+            saved = ((difference / (60 * 60 * 1000 * 24) * 1) * costPerDay).toFixed(2);            
             document.getElementById('days').firstChild.nodeValue = days;
             document.getElementById('hours').firstChild.nodeValue = hours;
             document.getElementById('minutes').firstChild.nodeValue = mins;
