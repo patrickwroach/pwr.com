@@ -269,11 +269,6 @@ ul li {
 .content-container#landing .content p span {
   color: #01abdf;
 }
-@media (max-width: 500px) {
-  .content-container#landing .content p {
-    font-size: 2.5em;
-  }
-}
 @media (max-width: 400px) {
   .content-container#landing .content p {
     font-size: 2em;
