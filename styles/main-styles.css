@@ -585,6 +585,9 @@ ul li {
   display: block;
   padding-bottom: 100%;
 }
+.content-container#contact {
+  height: calc(100vh - 50px);
+}
 .content-container#contact .content .copy-block {
   z-index: 2;
   position: relative;
