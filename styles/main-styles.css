@@ -247,8 +247,7 @@ ul li {
 }
 .content-container#landing {
   padding-top: 50px;
-  height: calc(100% - 50px);
-  min-height: 300px;
+  height: calc(100vh - 50px);
   display: table;
   box-sizing: border-box;
 }
@@ -271,7 +270,12 @@ ul li {
 }
 @media (max-width: 400px) {
   .content-container#landing .content p {
-    font-size: 2em;
+    font-size: 15vw;
+  }
+}
+@media (max-width: 750px) {
+  .content-container#landing .content p {
+    font-size: 8vw;
   }
 }
 .content-container#landing.site-port .content .copy-block p {
